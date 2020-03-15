@@ -20,10 +20,22 @@ fn main() {
             x += 1;
             println!();
         }
+        unwrap_f();
     }
 }
 
 fn arithmetic(letter: u8, delta: usize) -> u8 {
 
     (letter + (delta as u8)) as u8
+}
+
+fn unwrap_f(){
+    let mut var = "HVS EIWQY PFCKB TCL XIADG CJSF HVS ZONM RCU CT QOSGOF OBR MCIF IBWEIS GCZIHWCB WG CTTTUBTSAGBG";
+
+    let mut ITER = var.chars();
+    let mut i = ITER.next();
+    while i != None {
+        print!("{}", i.unwrap());
+        i = ITER.next();
+    }
 }
