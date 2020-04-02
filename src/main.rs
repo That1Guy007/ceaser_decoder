@@ -24,18 +24,23 @@ fn main() {
     }
 }
 
-fn arithmetic(letter: u8, delta: usize) -> u8 {
+fn arithmetic(letter: u8, delta: usize) -> char {
 
-    (letter + (delta as u8)) as u8
+    if (letter + (delta as u8)) > 90 {
+        (letter - (26 - delta) as u8) as char
+    }
+    else {
+        (letter + (delta as u8)) as char
+    } 
 }
 
 fn unwrap_f(){
-    let mut var = "HVS EIWQY PFCKB TCL XIADG CJSF HVS ZONM RCU CT QOSGOF OBR MCIF IBWEIS GCZIHWCB WG CTTTUBTSAGBG";
+    let var = "HVS EIWQY PFCKB TCL XIADG CJSF HVS ZONM RCU CT QOSGOF OBR MCIF IBWEIS GCZIHWCB WG CTTTUBTSAGBG";
 
-    let mut ITER = var.chars();
-    let mut i = ITER.next();
+    let mut iter = var.chars();
+    let mut i = iter.next();
     while i != None {
         print!("{}", i.unwrap());
-        i = ITER.next();
+        i = iter.next();
     }
 }
